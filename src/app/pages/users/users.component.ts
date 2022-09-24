@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatTableDataSource } from '@angular/material/table';
 import { User } from 'src/app/model/user.model';
 import { UserService } from 'src/app/services/user.service';
 
@@ -10,6 +11,8 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class UsersComponent implements OnInit {
   users: User[]=[];
+  dataSource: MatTableDataSource<User>=new MatTableDataSource<User>();
+  displayedColumns=['id','name','phone','age','edit'];
   constructor(private userService: UserService) {
     this.loadUsers();
   }
@@ -19,8 +22,10 @@ export class UsersComponent implements OnInit {
   loadUsers(): void{
     this.userService.getUsers().subscribe({
       next: (users)=>{
-        this.users=users;
-        console.log('Users del servicio: ',this.users)
+        this.dataSource.data=users;
+      },
+      error:(err)=>{
+        alert('ocurrio un error');
       },
     });
   }

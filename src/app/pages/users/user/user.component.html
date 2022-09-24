@@ -1,5 +1,5 @@
 <div class="container" *ngIf="formUser" [formGroup]="formUser">
-    <h1>Crear Usuario</h1>
+    <h1>{{title}}</h1>
     <mat-form-field appearance="fill" class="input-form">
         <mat-label>Nombre</mat-label>
         <input matInput placeholder="Ingrese el nombre" formControlName="name"/>

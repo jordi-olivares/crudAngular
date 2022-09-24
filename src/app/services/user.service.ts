@@ -13,4 +13,13 @@ export class UserService {
   getUsers(): Observable<User[]>{
     return this.http.get<User[]>('http://localhost:3000/users');
   }
+  getUser(id: number):Observable<User>{
+    return this.http.get<User>('http://localhost:3000/users/'+id);
+  }
+  newUser(user:User): Observable<User>{
+    return this.http.post<User>('http://localhost:3000/users',user)
+  }
+  editUser(user: User,id: number): Observable<User>{
+    return this.http.put<User>('http://localhost:3000/users/'+id,user);
+  }
 }
