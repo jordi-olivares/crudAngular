@@ -17,12 +17,14 @@
     {
       "id": 1,
       "name": "Puppy",
+      "typ": "perro",
       "family": "olivares",
       "owner": "jordi",
       "ownerphone": 2341
     },
     {
       "name": "Cmila",
+      "typ": "perro",
       "family": "Romero",
       "owner": "Lorena",
       "ownerphone": "12345",

@@ -11,7 +11,7 @@ import { PetService } from 'src/app/services/pet.service';
 export class PetsComponent implements OnInit {
   pets: Pet[]=[];
   dataSource: MatTableDataSource<Pet>=new MatTableDataSource<Pet>();
-  displayedColumns=['id','name','family','owner','ownerphone','edit','delete'];
+  displayedColumns=['id','name','typ','family','owner','ownerphone','edit','delete'];
   constructor(private petService: PetService) { 
     this.loadPets();
   }

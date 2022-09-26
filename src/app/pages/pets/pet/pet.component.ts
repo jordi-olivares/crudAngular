@@ -17,6 +17,7 @@ export class PetComponent implements OnInit {
   constructor(private fb: FormBuilder,private petService: PetService,private router:Router,private activateRoute: ActivatedRoute) {
     this.formPet=this.fb.group({
       name:['',Validators.required],
+      typ:['',Validators.required],
       family:['',Validators.required],
       owner:['',Validators.required],
       ownerphone:['',Validators.required]
