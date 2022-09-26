@@ -12,7 +12,7 @@ import { UserService } from 'src/app/services/user.service';
 export class UsersComponent implements OnInit {
   users: User[]=[];
   dataSource: MatTableDataSource<User>=new MatTableDataSource<User>();
-  displayedColumns=['id','name','phone','age','edit'];
+  displayedColumns=['id','name','phone','age','edit','delete'];
   constructor(private userService: UserService) {
     this.loadUsers();
   }
@@ -29,4 +29,17 @@ export class UsersComponent implements OnInit {
       },
     });
   }
+
+  delete(id: number): void{
+    this.userService.deleteUser(id).subscribe({
+      next:()=>{
+        alert('elemento eliminado');
+      },
+      error:()=>{
+        console.log('ocurrio un error al borrar');
+      }
+    });
+
+  }
+
 }
