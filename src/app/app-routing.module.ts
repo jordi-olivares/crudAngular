@@ -13,6 +13,7 @@ const routes: Routes = [
     loadChildren: ()=>import("./pages/about/about.module").then((m)=>m.AboutModule),
   },
   { path: 'users', loadChildren: () => import('./pages/users/users.module').then(m => m.UsersModule) },
+  { path: 'pets', loadChildren: () => import('./pages/pets/pets.module').then(m => m.PetsModule) },
   {
     path: '**',
     redirectTo: 'home',

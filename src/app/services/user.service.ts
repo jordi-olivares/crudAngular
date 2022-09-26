@@ -25,4 +25,5 @@ export class UserService {
   deleteUser(id: number):Observable<User>{
     return this.http.delete<User>('http://localhost:3000/users/'+id);
   }
+  
 }

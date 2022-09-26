@@ -12,5 +12,21 @@
       "age": "26",
       "id": 2
     }
+  ],
+  "pets": [
+    {
+      "id": 1,
+      "name": "Puppy",
+      "family": "olivares",
+      "owner": "jordi",
+      "ownerphone": 2341
+    },
+    {
+      "name": "Cmila",
+      "family": "Romero",
+      "owner": "Lorena",
+      "ownerphone": "12345",
+      "id": 2
+    }
   ]
 }

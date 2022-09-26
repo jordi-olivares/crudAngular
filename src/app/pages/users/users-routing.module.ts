@@ -15,6 +15,7 @@ const routes: Routes = [
       path: 'user/:id',
       component:UserComponent
     },
+    
   ];
 
 @NgModule({

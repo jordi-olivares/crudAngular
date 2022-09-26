@@ -1,0 +1,20 @@
+<div class="container" *ngIf="formPet" [formGroup]="formPet">
+    <h1>{{title}}</h1>
+    <mat-form-field appearance="fill" class="input-form">
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="Ingrese el nombre" formControlName="name"/>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="input-form">
+        <mat-label>Family</mat-label>
+        <input matInput placeholder="Ingrese la familia" formControlName="family"/>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="input-form">
+        <mat-label>Dueño</mat-label>
+        <input matInput placeholder="Ingrese el nombre del dueño" formControlName="owner"/>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="input-form">
+        <mat-label>Telefono del dueño</mat-label>
+        <input matInput placeholder="Ingrese telefono del dueño" formControlName="ownerphone"/>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="save()" [disabled]="formPet.invalid">Guardar</button>
+</div>
